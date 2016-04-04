@@ -1,5 +1,5 @@
 # Egyetemi Portálok Productivity Power Tools
-Egy páran már egy ideje mindenféle vicces kiegészítéseket írogattunk a tanszéki portálhoz és a diplomaterv portálhoz. Olyan dolgok ezek, amik egyszer jól jöttek volna, de nem akartuk vele zavarni a webmestert úgyhogy gyorsan megírtuk userscriptbe ezeket. Elsősorban oktatói oldalról lehetnek érdekesek ezek a funkciók, de nem kizárt, hogy hallgatók számára is egyszer hasznos lesz.
+Egy páran már egy ideje mindenféle vicces kiegészítéseket írogattunk a tanszéki portálhoz és a diplomaterv portálhoz. Olyan dolgok ezek, amik egyszer jól jöttek volna, de nem akartuk vele zavarni a webmestert úgyhogy gyorsan megírtuk userscriptbe ezeket. Elsősorban oktatói oldalról lehetnek érdekesek ezek a funkciók, de nem kizárt, hogy majd a hallgatók számára is néhány script hasznos lehet.
 
 # Használat
 A használathoz Userscript-eket kezelő böngésző bővítményre van szükség, ilyen például chrome-hoz a [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=hu). 
