@@ -8,7 +8,19 @@ Telepítés után hozzá lehet adni új scriptet a kezelőfelületen, ahova a \*
 # Diplomaterv portál https://diplomaterv.vik.bme.hu
 ## Dipterv portál témalista áttekinthetőségének javítása
 
-*TODO leírás és screenshot*
+Konzulensként a diplomaterv portál meglátogatásakor az esetek 99%-ában egyetlen céllal érkezel: hogy lásd, milyen adminisztratív akadályok állnak még a hallgatóid előtt, és hogy miket tehetsz azok elhárítására.
+
+Persze bele lehet tanulni, hiszen minden hallgatódra ugyanazok a feladatok várnak, ugyanazokkal a határidőkkel – legalábbis attól függően, hogy hol tartanak: Szakdolgozat, Diplomaterv 1 vagy Diplomaterv 2.
+
+A baj csak az, hogy a diplomaterv portál nem aknázza ki ezeket a hasonlóságokat, semmilyen csoportosítást nem alkalmaz, egyszerűen téma címe szerinti ABC rendezést prezentál – ami teljesen használhatatlan a fenti feladat ellátására. További probléma, hogy a feladatok besorolását ("színezését") is megkérdőjelezhető logika szerint teszi.
+
+A szkript elsődleges feladata, hogy kategorizálja a témákat az egyetlen releváns szempont, a tantárgy szerint:
+
+![image](https://cloud.githubusercontent.com/assets/1123672/14278183/a85ae086-fb26-11e5-939e-6bf3dbd40ec1.png)
+
+Így egyből kirajzolódnak a hasonlóságok az elvégzendő feladatok között, könnyebbé válik a közös ügyintézés. (Tervezett jövőbeli funkció, hogy a csoportos e-mail küldés is a fenti kategóriákat használja – olyan sosincs, hogy *tényleg mindenkinek* kell írni valamit, olyan viszont rengetegszer volna, hogy pl. *az összes diplomaterv 1-esnek kellene*.)
+
+Ami a másik problémát, a feladatok besorolását illeti, jelenleg egy módosítást tesz a szkript: ha valami a tanszékvezetőre vár, az zöld pipát kap, hiszen részedről (mint konzulens részéről) a feladat el van végezve. (Ha esetleg a tanszékvezető elutasítja, akkor úgyis "Konzulensre vár" lesz az új állapot.) Tervezett jövőbeli funkció a *még úgysem elvégezhető* feladatok elrejtése (pl. bírálat feltöltése, amíg a hallgató nem is töltött fel semmit).
 
 # Aut tanszéki portál https://www.aut.bme.hu
 

@@ -10,7 +10,7 @@
 /* jshint -W097 */
 'use strict';
 
-// Your code here...
+// 1. Csoportosítás megteremtése
 function createGroupIfNotEmpty(name, id, items) {
    if (items.length < 1)
        return;
@@ -50,7 +50,8 @@ createGroupIfNotEmpty("Diplomatervezés 1", "tm-dipterv1", dipterv1);
 createGroupIfNotEmpty("Diplomatervezés 2", "tm-dipterv2", dipterv2);
 createGroupIfNotEmpty("Egyéb", "tm-egyeb", egyeb);
 
-// Ha tanszékvezetőre vár, az részemről OK
+// 2. Feladatok besorolásának módosítása
+// (Ha tanszékvezetőre vár, az részemről OK)
 var unimportantItems = [];
 $(".lblStatusWarning").each(function(idx, label) {
     if (label.innerText.indexOf("Tanszékvezetőre vár") != -1) {
