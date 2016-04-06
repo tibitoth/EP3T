@@ -18,7 +18,7 @@ A szkript elsődleges feladata, hogy kategorizálja a témákat az egyetlen rele
 
 ![image](https://cloud.githubusercontent.com/assets/1123672/14278183/a85ae086-fb26-11e5-939e-6bf3dbd40ec1.png)
 
-Így egyből kirajzolódnak a hasonlóságok az elvégzendő feladatok között, könnyebbé válik a közös ügyintézés. (Tervezett jövőbeli funkció, hogy a csoportos e-mail küldés is a fenti kategóriákat használja – olyan sosincs, hogy *tényleg mindenkinek* kell írni valamit, olyan viszont rengetegszer volna, hogy pl. *az összes diplomaterv 1-esnek kellene*.)
+Így egyből kirajzolódnak a hasonlóságok az elvégzendő feladatok között, könnyebbé válik a közös ügyintézés. Ezt tovább könnyítendő, minden tantárgy szerinti csoporthoz elérhető a "Körlevél küldése" funkció, amellyel azoknak a hallgatóknak küldhetünk e-mailt, akik az adott tárgyhoz vannak hozzárendelve. 
 
 Ami a másik problémát, a feladatok besorolását illeti, jelenleg egy módosítást tesz a szkript: ha valami a tanszékvezetőre vár, az zöld pipát kap, hiszen részedről (mint konzulens részéről) a feladat el van végezve. (Ha esetleg a tanszékvezető elutasítja, akkor úgyis "Konzulensre vár" lesz az új állapot.) Tervezett jövőbeli funkció a *még úgysem elvégezhető* feladatok elrejtése (pl. bírálat feltöltése, amíg a hallgató nem is töltött fel semmit).
 
