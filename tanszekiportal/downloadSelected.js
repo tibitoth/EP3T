@@ -46,7 +46,6 @@ function downloadAll(){
 }
 
 function downloadFile(url, onSuccess) {   
-    debugger;
     var xhr = new XMLHttpRequest();            
     xhr.onreadystatechange = function () {         
         if (xhr.readyState == 4) {            

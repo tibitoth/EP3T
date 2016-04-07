@@ -27,7 +27,7 @@ Ami a másik problémát, a feladatok besorolását illeti, jelenleg egy módos�
 ## Kiválasztott jegyzetek letöltése
 A tantárgyak publikus oldalairól lehetőséget nyújt kiválasztani jegyzeteket, melyeket egyszerre, egy zip-be csomagolva le is lehet tölteni. 
 
-![download](https://cloud.githubusercontent.com/assets/8333960/14266257/37ede488-fac7-11e5-9068-ff9956d80833.PNG)
+![downloadselected](https://cloud.githubusercontent.com/assets/4943046/14346767/ee22e058-fcb3-11e5-94d8-d2b7251483a2.PNG)
 
 ## Csoportnévsorok exportálása excel formátumban
 Hasznos jelenléti névsorok nyomtatásához.
