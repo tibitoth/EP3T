@@ -1,7 +1,7 @@
 ﻿// ==UserScript==
 // @name         Tanszéki portál tananyag letöltő script
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Letölti a kiválasztott anyagokat a portálról
 // @author       Czeglédi Viktor 
 // @match        https://www.aut.bme.hu/Course/*
@@ -25,34 +25,23 @@ var count = 0;
 
     $('a#hpyCourseFile').each(function(i, e){
         var jqel = $(e);
-        var but = document.createElement("button");
-        but.innerText="Hozzáadás";
-        but.setAttribute("type","button");
-        but.onclick=buttonClicked;
+        var but = document.createElement("input");
+        but.setAttribute("type","checkbox");
+        but.setAttribute("value",jqel.attr("href"));
         jqel.before(but);
     });
 
 })();
 
-function buttonClicked(btn){
-    var url = $(btn.currentTarget.nextSibling).attr("href");
-    var idx = $.inArray(url,fileURLs);
-    if(idx === -1)
-    {
-        fileURLs.push(url);
-        btn.currentTarget.innerText="Mégse";
-    }
-    else
-    {
-        fileURLs.splice(idx, 1 );
-        btn.currentTarget.innerText="Hozzáadás";
-    }
-    if(event.preventDefault) event.preventDefault();
-    else return false;
-}
-
 function downloadAll(){
-    if(fileURLs.length === 0) return;
+    var checkedElements = $('a#hpyCourseFile').siblings("input:checked[type=checkbox]");
+    if(checkedElements.length === 0) return;
+    fileURLs = [];
+    for(i = 0; i < checkedElements.length; i++){
+        fileURLs.push($(checkedElements[i]).attr("value"));
+    }
+    count = 0;
+    zip = new JSZip();
     downloadFile(fileURLs[0],onDownloadComplete);
 }
 
