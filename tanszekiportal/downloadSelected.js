@@ -33,6 +33,23 @@ var count = 0;
 
 })();
 
+// function buttonClicked(btn){
+//     var url = $(btn.currentTarget.nextSibling).attr("href");
+//     var idx = $.inArray(url,fileURLs);
+//     if(idx === -1)
+//     {
+//         fileURLs.push(url);
+//         btn.currentTarget.innerText="Mégse";
+//     }
+//     else
+//     {
+//         fileURLs.splice(idx, 1 );
+//         btn.currentTarget.innerText="Hozzáadás";
+//     }
+//     if(event.preventDefault) event.preventDefault();
+//     else return false;
+// }
+
 function downloadAll(){
     var checkedElements = $('a#hpyCourseFile').siblings("input:checked[type=checkbox]");
     if(checkedElements.length === 0) return;
@@ -41,6 +58,7 @@ function downloadAll(){
         fileURLs.push($(checkedElements[i]).attr("value"));
     }
     count = 0;
+    zip = new JSZip();
     downloadFile(fileURLs[0],onDownloadComplete);
 }
 
