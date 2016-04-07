@@ -16,7 +16,7 @@ A baj csak az, hogy a diplomaterv portál nem aknázza ki ezeket a hasonlóságo
 
 A szkript elsődleges feladata, hogy kategorizálja a témákat az egyetlen releváns szempont, a tantárgy szerint:
 
-![image](https://cloud.githubusercontent.com/assets/1123672/14278183/a85ae086-fb26-11e5-939e-6bf3dbd40ec1.png)
+![image](https://cloud.githubusercontent.com/assets/1123672/14344110/f48c9afa-fca5-11e5-8521-10d508414404.png)
 
 Így egyből kirajzolódnak a hasonlóságok az elvégzendő feladatok között, könnyebbé válik a közös ügyintézés. Ezt tovább könnyítendő, minden tantárgy szerinti csoporthoz elérhető a "Körlevél küldése" funkció, amellyel azoknak a hallgatóknak küldhetünk e-mailt, akik az adott tárgyhoz vannak hozzárendelve. 
 
