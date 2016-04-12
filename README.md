@@ -45,6 +45,11 @@ Ez a script a csoport eredményei oldalon a már meglévő `E-mail küldése a c
 
 ![bcc](https://cloud.githubusercontent.com/assets/8333960/14266240/2496ea1a-fac7-11e5-8614-2df410316b14.PNG)
 
+## Csoportok számonkérései táblázatának formázása
+Ha túl sok számonkérés van egy csoporthoz rendelve nem túl kényelmes a fix ~1000px széles táblázatot oldalra görgetni, noha már mindenkinek legalább fullhd monitora van.
+A táblázat és az oldalfejléc kinyújtásra kerül az oldal szélességének 85%-ában, és a táblázat belső görgetése helyett a teljes oldal görgethető függőlegesen.
+
+![tablewidth](https://cloud.githubusercontent.com/assets/8333960/14470254/bd0a5ef4-00e8-11e6-8a49-276456d5dc7f.png)
 
 ## Értékelések színezése
 Egy konkrét számonkérés részletes oldalán, az értékelések listájánál a még nem értékelt sorok hátterét kiszínezi.

@@ -1,10 +1,11 @@
 // ==UserScript==
-// @name         Csoportok táblázatának nyújtása
+// @name         Tanszéki portál: Csoportok táblázatának nyújtása
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  az oldal 85%-át kihasználó táblázat a csoportok oldalon.
+// @description  A csoportok oldalon a táblázat és az oldalfejléc kinyújtásra kerül az oldal szélességének 85%-ára, és a táblázat belső görgetése helyett a teljes oldal görgethető függőlegesen.
 // @author       Tóth Tibor
 // @match        https://www.aut.bme.hu/Course/*/*/*
+// @exclude      https://www.aut.bme.hu/Course/*/*/*/*
 // @grant        none
 // ==/UserScript==
 
@@ -28,5 +29,14 @@
     $("#mainNavBar").css("background-size", "100.7% 29px");   
     $("#mainNavBar").css("width", "100%");
     
-    // TODO táblázat formázása
+    $('#gvStudentAssignment').fixedHeaderTable("destroy");
+    $('#gvStudentAssignment').fixedHeaderTable({
+					width: "100%",
+					height: $('#gvStudentAssignment').outerHeight()+2,
+					fixedColumns: 2,
+					footer: false,
+					cloneHeadToFoot: true //bugos ezért kell köv utasítás
+				});
+
+    $("#gvStudentAssignment > tfoot").html($("#gridContainer > div > div > div.fht-fixed-body > div:nth-child(1) > table > thead > tr").clone());
 })();
