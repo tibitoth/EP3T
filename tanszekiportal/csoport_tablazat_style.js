@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tanszéki portál: Csoportok táblázatának nyújtása
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  A csoportok oldalon a táblázat és az oldalfejléc kinyújtásra kerül az oldal szélességének 85%-ára, és a táblázat belső görgetése helyett a teljes oldal görgethető függőlegesen.
 // @author       Tóth Tibor
 // @match        https://www.aut.bme.hu/Course/*/*/*
