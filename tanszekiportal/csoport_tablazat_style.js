@@ -32,7 +32,7 @@
     $('#gvStudentAssignment').fixedHeaderTable("destroy");
     $('#gvStudentAssignment').fixedHeaderTable({
 					width: "100%",
-					height: $('#gvStudentAssignment').outerHeight()+2,
+					height: $('#gvStudentAssignment').outerHeight()+20,
 					fixedColumns: 2,
 					footer: false,
 					cloneHeadToFoot: true //bugos ezért kell köv utasítás
