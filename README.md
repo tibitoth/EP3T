@@ -60,3 +60,8 @@ Egy konkrét számonkérés részletes oldalán, az értékelések listájánál
 Egy dedikált gombbal letölthető egy zip-be csomagolva az összes feltöltött megoldás a számonkérés részletes oldaláról.
 
 ![downloadall](https://cloud.githubusercontent.com/assets/8333960/14266268/47e9cea6-fac7-11e5-93e2-3ed4b81fa3d5.PNG)
+
+## Új jegyzet alapértelmezett kategóriája
+Ha több jegyzetet töltök fel egymás után, tipikusan mind ugyanolyan kategóriájú, így praktikus lenne, ha a portál mindig az előzőleg használt kategóriát kínálná fel.
+
+Ez a script pont erre szolgál: mindig az utoljára kiválasztott értékre állítja a kategória legördülőt az oldal betöltésekor (némi késleltetéssel, sajnos). Nem tesz különbséget tárgyak között.
