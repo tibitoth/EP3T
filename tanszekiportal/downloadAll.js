@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tanszéki portál összes letöltése
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Tanszéki portálról minden feltöltött fájl letöltése
 // @author       Nagy Ákos
 // @match        https://www.aut.bme.hu/Course/*/*/*/*
@@ -45,12 +45,22 @@ function onDownloadComplete(blobData){
                     downloadFile(fileURLs[count], onDownloadComplete);                    
                 }
                 else {                                             
-                    var link = document.getElementById('download-link');
-                    var blob = zip.generate({type:"blob"});
-                    var link=document.createElement('a');
-                    link.download = $("div#body > div > h1").get(0).innerText+'.zip';
-                    link.href = window.URL.createObjectURL(blob);
-                    link.click();
+                     var link = document.getElementById('download-link');
+                    
+                    if (zip.generateAsync) {
+                        zip.generateAsync({type:"blob"}).then(function(content) {
+                            var link=document.createElement('a');
+                            link.download = $("div#body > div > h1").get(0).innerText+'.zip';
+                            link.href = window.URL.createObjectURL(content);
+                            link.click();
+                        });
+                    } else {
+                        var blob = zip.generate({type:"blob"});
+                        var link=document.createElement('a');
+                        link.download = $("div#body > div > h1").get(0).innerText+'.zip';
+                        link.href = window.URL.createObjectURL(blob);
+                        link.click();
+                    }
                 }
             });
     }
