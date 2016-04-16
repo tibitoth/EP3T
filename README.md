@@ -7,19 +7,19 @@ Ha a Tampermonkey fent van, akkor az alábbi táblázatban szereplő scriptek Te
 
 # Tartalom
 
-| Diplomaterv portál | |
-|--------------------|-|
-| [Témalista áttekinthetőségének javítása](https://github.com/conwid/EP3T#dipterv-portál-témalista-áttekinthetőségének-javítása) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/diptervportal/temalista-attekintes.user.js) |
+Diplomaterv portál | |
+--------------------|---
+[Témalista áttekinthetőségének javítása](https://github.com/conwid/EP3T#dipterv-portál-témalista-áttekinthetőségének-javítása)|[Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/diptervportal/temalista-attekintes.user.js) |
 
-| Aut Tanszéki portál | |
-|---------------------|-|
-| [Kiválasztott jegyzetek letöltése](https://github.com/conwid/EP3T#kiválasztott-jegyzetek-letöltése)  | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/downloadSelected.user.js) |
-| [Csoportnévsorok exportálása excel formátumban](https://github.com/conwid/EP3T#csoportnévsorok-exportálása-excel-formátumban) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/nevsor.user.js) |
-| [Titkos másolat](https://github.com/conwid/EP3T#titkos-másolat) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/bcc.user.js) |
-| [Csoportok számonkérései táblázatának formázása](https://github.com/conwid/EP3T#csoportok-számonkérései-táblázatának-formázása) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/csoport_tablazat_style.user.js) |
-| [Értékelések színezése](https://github.com/conwid/EP3T#Értékelések-színezése) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/ertekeles_szinezes.user.js) |
-| [Összes beadott fájl letöltése](https://github.com/conwid/EP3T#Összes-beadott-fájl-letöltése) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/downloadAll.user.js) |
-| [Új jegyzet alapértelmezett kategóriája](Új jegyzet alapértelmezett kategóriája) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/jegyzet_kategoria.user.js) |
+Aut tanszéki portál | |
+|---------------------|---
+[Kiválasztott jegyzetek letöltése](https://github.com/conwid/EP3T#kiválasztott-jegyzetek-letöltése)  | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/downloadSelected.user.js)
+[Csoportnévsorok exportálása excel formátumban](https://github.com/conwid/EP3T#csoportnévsorok-exportálása-excel-formátumban) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/nevsor.user.js)
+[Titkos másolat](https://github.com/conwid/EP3T#titkos-másolat) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/bcc.user.js)
+[Csoportok számonkérései táblázatának formázása](https://github.com/conwid/EP3T#csoportok-számonkérései-táblázatának-formázása) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/csoport_tablazat_style.user.js)
+[Értékelések színezése](https://github.com/conwid/EP3T#Értékelések-színezése) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/ertekeles_szinezes.user.js)
+[Összes beadott fájl letöltése](https://github.com/conwid/EP3T#Összes-beadott-fájl-letöltése) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/downloadAll.user.js)
+[Új jegyzet alapértelmezett kategóriája](Új jegyzet alapértelmezett kategóriája) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/jegyzet_kategoria.user.js)
 
 # Diplomaterv portál https://diplomaterv.vik.bme.hu
 ## Dipterv portál témalista áttekinthetőségének javítása
