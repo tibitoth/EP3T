@@ -12,7 +12,7 @@ Konzulensként a diplomaterv portál meglátogatásakor az esetek 99%-ában egye
 
 Persze bele lehet tanulni, hiszen minden hallgatódra ugyanazok a feladatok várnak, ugyanazokkal a határidőkkel – legalábbis attól függően, hogy hol tartanak: Szakdolgozat, Diplomaterv 1 vagy Diplomaterv 2.
 
-A baj csak az, hogy a diplomaterv portál nem aknázza ki ezeket a hasonlóságokat, semmilyen csoportosítást nem alkalmaz, egyszerűen téma címe szerinti ABC rendezést prezentál – ami teljesen használhatatlan a fenti feladat ellátására. További probléma, hogy a feladatok besorolását ("színezését") is megkérdőjelezhető logika szerint teszi.
+A baj csak az, hogy a diplomaterv portál nem aknázza ki ezeket a hasonlóságokat, semmilyen csoportosítást nem alkalmaz, egyszerűen téma címe szerinti ABC rendezést prezentál – ami teljesen használhatatlan a fenti feladat ellátására. További probléma, hogy a feladatok besorolását ("színezését") is megkérdőjelezhető logika szerint teszi. A csoportosítás mellett az is nehezíti a konzulens dolgát, hogy - a sokszor körültekintően szakdolgozatosra/diplomásra megválasztott - témacím szerint történik a rendezés, nem pedig a hallgató neve szerint.
 
 A szkript elsődleges feladata, hogy kategorizálja a témákat az egyetlen releváns szempont, a tantárgy szerint:
 
@@ -21,6 +21,8 @@ A szkript elsődleges feladata, hogy kategorizálja a témákat az egyetlen rele
 Így egyből kirajzolódnak a hasonlóságok az elvégzendő feladatok között, könnyebbé válik a közös ügyintézés. Ezt tovább könnyítendő, minden tantárgy szerinti csoporthoz elérhető a "Körlevél küldése" funkció, amellyel azoknak a hallgatóknak küldhetünk e-mailt, akik az adott tárgyhoz vannak hozzárendelve. 
 
 Ami a másik problémát, a feladatok besorolását illeti, jelenleg egy módosítást tesz a szkript: ha valami a tanszékvezetőre vár, az zöld pipát kap, hiszen részedről (mint konzulens részéről) a feladat el van végezve. (Ha esetleg a tanszékvezető elutasítja, akkor úgyis "Konzulensre vár" lesz az új állapot.) Tervezett jövőbeli funkció a *még úgysem elvégezhető* feladatok elrejtése (pl. bírálat feltöltése, amíg a hallgató nem is töltött fel semmit).
+
+Végül, de nem utolsó sorban pedig a csoporton belül a témák a hallgatók neve szerint vannak rendezve.
 
 # Aut tanszéki portál https://www.aut.bme.hu
 

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Diplomaterv portál
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  Dipterv portál témalista áttekinthetőségének javítása szokatlan eszközökkel
 // @author       Kis-Nagy Dániel
 // @match        https://diplomaterv.vik.bme.hu/hu/Supervisor/Default.aspx
@@ -65,6 +65,13 @@ function DecodeEmailBcc( encodedEmail )
 }
 
 
+function comp(a,b) {    
+    var af=a.find('a+br+a').get(0).innerText;
+    var bf=b.find('a+br+a').get(0).innerText;
+    return af.localeCompare(bf);
+    
+}
+
 // 1. Csoportosítás megteremtése
 function createGroupIfNotEmpty(name, id, items) {
    if (items.length < 1)
@@ -73,7 +80,9 @@ function createGroupIfNotEmpty(name, id, items) {
    $(".tema-lista").after("<h3 id='" + id + "'>" + name + "</h3>");
    $("#" + id).after("<ul></ul>");
    var ul = $("#" + id + " + ul");
-   var email='';
+   var email='';          
+   
+   items.sort(comp);
    
    for (var item of items) {
        item.detach();
