@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tanszéki portál összes letöltése
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  Tanszéki portálról minden feltöltött fájl letöltése
 // @author       Nagy Ákos
 // @match        https://www.aut.bme.hu/Course/*/*/*/*
