@@ -159,7 +159,7 @@ function filter() {
     });    
     $(".dolgozat-adatok").each(function(idx, item) {
         var firstTask = $($(item).find("div").get(0)).find("span.lblStatusWarning:first");
-        if (!firstTask || actives.includes(firstTask.text())) {
+        if (actives.includes(firstTask.text()) || (!firstTask && actives.includes("Done"))) {
             $(item).show();
         } else {
             $(item).hide();
@@ -199,6 +199,21 @@ function updateList() {
         current=$(br);
         
     }    
+        var ch = document.createElement("input");
+        ch.setAttribute("type","checkbox");
+        ch.setAttribute("value","Done");
+        ch.setAttribute("checked",true);                
+        $(ch).change(filter);
+        current.after(ch);
+        current=$(ch);
+        var lb = document.createElement("label");       
+        lb.innerText="Kész";
+        current.after(lb);
+        current=$(lb);
+        var br=document.createElement("br");
+        current.after(br);
+        current=$(br);
+        
     
 }
 
