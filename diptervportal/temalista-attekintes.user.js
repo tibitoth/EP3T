@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Diplomaterv portál
 // @namespace    http://tampermonkey.net/
-// @version      0.6
+// @version      0.7
 // @description  Dipterv portál témalista áttekinthetőségének javítása szokatlan eszközökkel
 // @author       Kis-Nagy Dániel
 // @match        https://diplomaterv.vik.bme.hu/hu/Supervisor/Default.aspx
@@ -151,3 +151,55 @@ $(".dolgozat-adatok").each(function(idx, item) {
     }
 });
 
+// 4. Szűrés
+function filter() {
+    var actives=[]
+    $("input:checkbox:checked").each(function() {        
+        actives.push($(this).val());
+    });    
+    $(".dolgozat-adatok").each(function(idx, item) {
+        var firstTask = $($(item).find("div").get(0)).find("span.lblStatusWarning:first");
+        if (!firstTask || actives.includes(firstTask.text())) {
+            $(item).show();
+        } else {
+            $(item).hide();
+        }
+    });    
+    
+}
+
+function updateList() {
+    var warningStatusList=[];
+    $(".dolgozat-adatok").each(function(idx, item) {
+        var firstTask = $($(item).find("div").get(0)).find("span.lblStatusWarning:first");
+        if (firstTask) {
+             if (!(warningStatusList.includes(firstTask.text()))) {
+                 warningStatusList.push(firstTask.text());
+             }
+        }        
+    }); 
+    
+    var html="<br/><br/>Témák szűrése az első várakozó feladat állapota szerint:<br/><div id='placeHolder'/>";
+    $("select").after(html);        
+    var current=$("#placeHolder");    
+    for (var status of warningStatusList) {
+        var ch = document.createElement("input");
+        ch.setAttribute("type","checkbox");
+        ch.setAttribute("value",status);
+        ch.setAttribute("checked",true);                
+        $(ch).change(filter);
+        current.after(ch);
+        current=$(ch);
+        var lb = document.createElement("label");       
+        lb.innerText=status;
+        current.after(lb);
+        current=$(lb);
+        var br=document.createElement("br");
+        current.after(br);
+        current=$(br);
+        
+    }    
+    
+}
+
+updateList();

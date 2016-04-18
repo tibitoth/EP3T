@@ -41,6 +41,14 @@ Ami a másik problémát, a feladatok besorolását illeti, jelenleg két módos
 - Ha valami a tanszékvezetőre vár, az zöld pipát kap, hiszen részedről (mint konzulens részéről) a feladat el van végezve. (Ha esetleg a tanszékvezető elutasítja, akkor úgyis *"Konzulensre vár"* lesz az új állapot.) Tervezett jövőbeli funkció a *még úgysem elvégezhető* feladatok elrejtése (pl. bírálat feltöltése, amíg a hallgató nem is töltött fel semmit).
 - Ha nincs még beadott dolgozat, a Bírálat feladat státuszát *"Még nem aktuális"*-ra módosítjuk, zöld pipával.
 
+Az áttekintehetőség további javításának érdekében lehet szűrni a témákat az egyes félévekben:
+
+![dipterv2](https://cloud.githubusercontent.com/assets/9843364/14621333/34f0e2de-05c2-11e6-9345-3876ba1f591c.png)
+A script minden témánál megnézi az első olyan feladatot, amely mellett sárga felkiátóljel van (ha több ilyen feladat is van, akkor csak a sorrendben az első számít), majd ezekhez az állapotokhoz ad egy-egy checkboxot.
+Ha minden téma készen van (csak zöld állapotok vannak), akkor nem jelennek meg checkboxok.
+Az egyes checkboxokkal szabályozhatjuk, hogy mely témákat szeretnénk látni. Csak akkor jelenik meg egy téma, ha a témához kapcsolódó sorrendben az első sárga feladathoz tartozó checkbox ki van pipálva.
+Ezen felül tartozik még egy checkbox a kész témák megjelenítéséhez is.
+
 Végül, de nem utolsó sorban pedig a csoporton belül a témák a hallgatók neve szerint vannak rendezve.
 
 # Aut tanszéki portál https://www.aut.bme.hu
