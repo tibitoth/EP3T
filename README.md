@@ -32,11 +32,14 @@ A baj csak az, hogy a diplomaterv portál nem aknázza ki ezeket a hasonlóságo
 
 A szkript elsődleges feladata, hogy kategorizálja a témákat az egyetlen releváns szempont, a tantárgy szerint:
 
-![image](https://cloud.githubusercontent.com/assets/1123672/14344110/f48c9afa-fca5-11e5-8521-10d508414404.png)
+![dipterv](https://cloud.githubusercontent.com/assets/1123672/14603411/bcf0d888-056d-11e6-87e8-48b87cdef794.png)
 
 Így egyből kirajzolódnak a hasonlóságok az elvégzendő feladatok között, könnyebbé válik a közös ügyintézés. Ezt tovább könnyítendő, minden tantárgy szerinti csoporthoz elérhető a "Körlevél küldése" funkció, amellyel azoknak a hallgatóknak küldhetünk e-mailt, akik az adott tárgyhoz vannak hozzárendelve. 
 
-Ami a másik problémát, a feladatok besorolását illeti, jelenleg egy módosítást tesz a szkript: ha valami a tanszékvezetőre vár, az zöld pipát kap, hiszen részedről (mint konzulens részéről) a feladat el van végezve. (Ha esetleg a tanszékvezető elutasítja, akkor úgyis "Konzulensre vár" lesz az új állapot.) Tervezett jövőbeli funkció a *még úgysem elvégezhető* feladatok elrejtése (pl. bírálat feltöltése, amíg a hallgató nem is töltött fel semmit).
+Ami a másik problémát, a feladatok besorolását illeti, jelenleg két módosítást tesz a szkript:
+
+- Ha valami a tanszékvezetőre vár, az zöld pipát kap, hiszen részedről (mint konzulens részéről) a feladat el van végezve. (Ha esetleg a tanszékvezető elutasítja, akkor úgyis "Konzulensre vár" lesz az új állapot.) Tervezett jövőbeli funkció a *még úgysem elvégezhető* feladatok elrejtése (pl. bírálat feltöltése, amíg a hallgató nem is töltött fel semmit).
+- Ha a nincs még beadott dolgozat, a Bírálat feladat státuszát *"Még nem aktuális"*-ra módosítjuk, zöld pipával.
 
 Végül, de nem utolsó sorban pedig a csoporton belül a témák a hallgatók neve szerint vannak rendezve.
 

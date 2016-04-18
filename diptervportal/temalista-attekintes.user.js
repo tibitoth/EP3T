@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Diplomaterv portál
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      0.6
 // @description  Dipterv portál témalista áttekinthetőségének javítása szokatlan eszközökkel
 // @author       Kis-Nagy Dániel
 // @match        https://diplomaterv.vik.bme.hu/hu/Supervisor/Default.aspx
@@ -87,6 +87,7 @@ function createGroupIfNotEmpty(name, id, items) {
    for (var item of items) {
        item.detach();
        ul.append(item);
+       item.addClass("dolgozat-adatok");
        var a_href = item.find('a+br+a').attr('href');                     
        if (a_href) {                      
            var param1=a_href.split("'")[1];
@@ -136,4 +137,17 @@ for (var item of unimportantItems) {
     $(item).removeClass("lblStatusWarning")
            .addClass("lblStatusSuccess");
 }
+
+
+// 3. Bírálat elodázása
+// (Ha nincs beadott dolgozat, nincs is mit bírálni)
+$(".dolgozat-adatok").each(function(idx, item) {
+    var tasks = $($(item).find("div").get(0)).find("span");
+    var isReviewNeeded = tasks.get(2).innerText.indexOf("Beadva") != -1;
+    if (!isReviewNeeded) {
+        var reviewStatusSpan = tasks.get(3);
+        reviewStatusSpan.innerText = "Még nem aktuális";
+        $(reviewStatusSpan).removeClass("lblStatusWarning").addClass("lblStatusSuccess");
+    }
+});
 
