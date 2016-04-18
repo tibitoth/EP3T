@@ -38,8 +38,8 @@ A szkript elsődleges feladata, hogy kategorizálja a témákat az egyetlen rele
 
 Ami a másik problémát, a feladatok besorolását illeti, jelenleg két módosítást tesz a szkript:
 
-- Ha valami a tanszékvezetőre vár, az zöld pipát kap, hiszen részedről (mint konzulens részéről) a feladat el van végezve. (Ha esetleg a tanszékvezető elutasítja, akkor úgyis "Konzulensre vár" lesz az új állapot.) Tervezett jövőbeli funkció a *még úgysem elvégezhető* feladatok elrejtése (pl. bírálat feltöltése, amíg a hallgató nem is töltött fel semmit).
-- Ha a nincs még beadott dolgozat, a Bírálat feladat státuszát *"Még nem aktuális"*-ra módosítjuk, zöld pipával.
+- Ha valami a tanszékvezetőre vár, az zöld pipát kap, hiszen részedről (mint konzulens részéről) a feladat el van végezve. (Ha esetleg a tanszékvezető elutasítja, akkor úgyis *"Konzulensre vár"* lesz az új állapot.) Tervezett jövőbeli funkció a *még úgysem elvégezhető* feladatok elrejtése (pl. bírálat feltöltése, amíg a hallgató nem is töltött fel semmit).
+- Ha nincs még beadott dolgozat, a Bírálat feladat státuszát *"Még nem aktuális"*-ra módosítjuk, zöld pipával.
 
 Végül, de nem utolsó sorban pedig a csoporton belül a témák a hallgatók neve szerint vannak rendezve.
 
