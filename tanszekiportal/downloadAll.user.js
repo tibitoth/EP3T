@@ -12,7 +12,7 @@
 'use strict';
 
 function getElements() {
-    var elements=$("li.zip > a, li.docx > a, li.pdf > a");    
+    var elements=$("li.zip > a, li.docx > a, li.pdf > a, li.txt > a");    
     var links=[];
     $(elements).each(function() {links.push($(this).attr('href'));});        
     return links;
