@@ -1,7 +1,7 @@
 ﻿// ==UserScript==
 // @name         Tanszéki portál tananyag letöltő script
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Letölti a kiválasztott anyagokat a portálról
 // @author       Czeglédi Viktor 
 // @match        https://www.aut.bme.hu/Course/*
@@ -66,13 +66,21 @@ function onDownloadComplete(blobData){
                 count++;
                 downloadFile(fileURLs[count], onDownloadComplete);                    
             }
-            else {                                             
-                var link = document.getElementById('download-link');
-                var blob = zip.generate({type:"blob"});
-                var link=document.createElement('a');
-                link.download = $("div#body > h1").get(0).innerText+'.zip';
-                link.href = window.URL.createObjectURL(blob);
-                link.click();
+            else {
+                if (zip.generateAsync) {
+                    zip.generateAsync({type:"blob"}).then(function(content) {
+                        var link=document.createElement('a');
+                        link.download = $("div#body > h1").get(0).innerText+'.zip';
+                        link.href = window.URL.createObjectURL(content);
+                        link.click();
+                    });
+                } else {
+                    var blob = zip.generate({type:"blob"});
+                    var link=document.createElement('a');
+                    link.download = $("div#body > h1").get(0).innerText+'.zip';
+                    link.href = window.URL.createObjectURL(blob);
+                    link.click();
+                }
             }
         });
     }
