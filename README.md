@@ -81,7 +81,7 @@ A táblázat és az oldalfejléc kinyújtásra kerül az oldal szélességének 
 ![tablewidth](https://cloud.githubusercontent.com/assets/8333960/14470254/bd0a5ef4-00e8-11e6-8a49-276456d5dc7f.png)
 
 ## Értékelések színezése
-Egy konkrét számonkérés részletes oldalán, az értékelések listájánál a még nem értékelt sorok hátterét kiszínezi.
+Egy konkrét számonkérés részletes oldalán, az értékelések listájánál a még nem értékelt sorok hátterét pirosra, illetve a módosított, de még nem mentett sorokét sárgára színezi.
 
 ![szinezes](https://cloud.githubusercontent.com/assets/8333960/14266287/6d9d84bc-fac7-11e5-8447-c167e6fb6e3c.PNG)
 
