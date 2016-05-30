@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Diplomaterv portál
 // @namespace    http://tampermonkey.net/
-// @version      0.7
+// @version      0.8
 // @description  Dipterv portál témalista áttekinthetőségének javítása szokatlan eszközökkel
 // @author       Kis-Nagy Dániel
 // @match        https://diplomaterv.vik.bme.hu/hu/Supervisor/Default.aspx
@@ -142,7 +142,7 @@ for (var item of unimportantItems) {
 // 3. Bírálat elodázása
 // (Ha nincs beadott dolgozat, nincs is mit bírálni)
 $(".dolgozat-adatok").each(function(idx, item) {
-    var tasks = $($(item).find("div").get(0)).find("span");
+    var tasks = $(item).find("div").eq(0).find("span");
     var isReviewNeeded = tasks.get(2).innerText.indexOf("Beadva") != -1;
     if (!isReviewNeeded) {
         var reviewStatusSpan = tasks.get(3);
@@ -158,8 +158,9 @@ function filter() {
         actives.push($(this).val());
     });    
     $(".dolgozat-adatok").each(function(idx, item) {
-        var firstTask = $($(item).find("div").get(0)).find("span.lblStatusWarning:first");
-        if (actives.includes(firstTask.text()) || (!firstTask && actives.includes("Done"))) {
+        var firstTask = $(item).find("div").eq(0).find("span.lblStatusWarning:first");
+        var firstTaskFound = firstTask && firstTask.length > 0;
+        if ((firstTaskFound && actives.includes(firstTask.text())) || (!firstTaskFound && actives.includes("Done"))) {
             $(item).show();
         } else {
             $(item).hide();
@@ -171,8 +172,8 @@ function filter() {
 function updateList() {
     var warningStatusList=[];
     $(".dolgozat-adatok").each(function(idx, item) {
-        var firstTask = $($(item).find("div").get(0)).find("span.lblStatusWarning:first");
-        if (firstTask) {
+        var firstTask = $(item).find("div").eq(0).find("span.lblStatusWarning:first");
+        if (firstTask && firstTask.length > 0) {
              if (!(warningStatusList.includes(firstTask.text()))) {
                  warningStatusList.push(firstTask.text());
              }
