@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Tanszéki portál összes letöltése
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  Tanszéki portálról minden feltöltött fájl letöltése
-// @author       Nagy Ákos
+// @author       Nagy Ákos, Kis-Nagy Dániel
 // @match        https://www.aut.bme.hu/Course/*/*/*/*
 // @require      https://raw.githubusercontent.com/Stuk/jszip/master/dist/jszip.js
 // @grant        none
@@ -22,6 +22,7 @@ function getElements() {
 var fileURLs = getElements();
 var zip = new JSZip();
 var count = 0;
+var studentNames = $("tr.gridViewRow td:first-child, tr.gridViewAltRow td:first-child");
 
 function downloadFile(url, onSuccess) {   
     var xhr = new XMLHttpRequest();            
@@ -38,7 +39,8 @@ function downloadFile(url, onSuccess) {
 function onDownloadComplete(blobData){      
     if (count < fileURLs.length) {        
         blobToBase64(blobData, function(binaryData){                
-                var fileName = fileURLs[count].substring(fileURLs[count].lastIndexOf('/')+1);
+                var studentName = studentNames.get(count).innerText;
+                var fileName = studentName + " - " + fileURLs[count].substring(fileURLs[count].lastIndexOf('/')+1);
                 zip.file(fileName, binaryData, {base64: true});
                 if (count < fileURLs.length -1){
                     count++;
