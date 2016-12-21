@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Tanszéki portál értékelések színezése
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  A tanszéki portálon az értékelések listájánál a nem értékelt sorok hátterét kiszínezi
-// @author       Ákos Nagy, Dániel Kis-Nagy
+// @author       Ákos Nagy, Dániel Kis-Nagy, Tibor Tóth
 // @match        https://www.aut.bme.hu/Course/*/*/*/*
 // @grant        none
 // ==/UserScript==
@@ -23,9 +23,14 @@ rows.each(function() {
     }
 });
 
-$(rowSelector + ' select, ' + rowAltSelector + ' select').change(function(e) {
+var inputChangedHandler = function(e) {
     $(e.currentTarget.parentNode.parentNode).css('background-color','#FFCE43');
-    changedCount++;
+
+    if ($(e.currentTarget.parentNode.parentNode).data('changed') == null){
+        $(e.currentTarget.parentNode.parentNode).data('changed', true);
+        changedCount++;
+    }
+
     // Ha több változásunk van, akkor a Ment gombot letiltjuk, ugyanis azzal
     // nagyon könnyen el tudjuk veszíteni az összes többi módosításunkat...
     if (changedCount > 1) {
@@ -35,4 +40,11 @@ $(rowSelector + ' select, ' + rowAltSelector + ' select').change(function(e) {
             this.title = "Több sor is megváltozott. Használd inkább az Összes eredmény mentése gombot!";
         });
     }
-});
+};
+
+$(rowSelector + ' select, ' + rowAltSelector + ' select').change(inputChangedHandler);
+
+$(rowSelector + ' input#txtResult, ' + rowAltSelector + ' input#txtResult').live('change keydown paste', inputChangedHandler);
+
+$(rowSelector + ' textArea#txtStaffComment, ' + rowAltSelector + ' textArea#txtStaffComment').live('change keydown paste', inputChangedHandler);
+$(rowSelector + ' textArea#txtComment, ' + rowAltSelector + ' textArea#txtComment').live('change keydown paste', inputChangedHandler);
