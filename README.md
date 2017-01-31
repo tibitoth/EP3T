@@ -21,6 +21,10 @@ Aut tanszéki portál | |
 [Összes beadott fájl letöltése](https://github.com/conwid/EP3T#Összes-beadott-fájl-letöltése) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/downloadAll.user.js)
 [Új jegyzet alapértelmezett kategóriája](https://github.com/conwid/EP3T#Új-jegyzet-alapértelmezett-kategóriája) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/jegyzet_kategoria.user.js)
 
+Oktatói neptun | |
+|---------------------|---
+[Aktuális félév kiválasztása](https://github.com/conwid/EP3T#Aktuális-félév-kiválasztása) | [Telepítés](https://github.com/conwid/EP3T/raw/feature/neptun-felev/neptun/felevvalasztas.user.js)
+
 # Diplomaterv portál https://diplomaterv.vik.bme.hu
 ## Dipterv portál témalista áttekinthetőségének javítása
 
@@ -94,3 +98,8 @@ Egy dedikált gombbal letölthető egy zip-be csomagolva az összes feltöltött
 Ha több jegyzetet töltök fel egymás után, tipikusan mind ugyanolyan kategóriájú, így praktikus lenne, ha a portál mindig az előzőleg használt kategóriát kínálná fel.
 
 Ez a script pont erre szolgál: mindig az utoljára kiválasztott értékre állítja a kategória legördülőt az oldal betöltésekor (némi késleltetéssel, sajnos). Nem tesz különbséget tárgyak között.
+
+# (BME) Oktatói neptun
+
+## Aktuális félév kiválasztása
+Az aktuális félév automatikusan kiválasztásra kerül a legördülő menüből. Aktuálisnak a legfrissebb elem számít.
