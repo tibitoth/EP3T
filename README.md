@@ -22,8 +22,8 @@ Aut tanszéki portál | |
 [Új jegyzet alapértelmezett kategóriája](https://github.com/conwid/EP3T#Új-jegyzet-alapértelmezett-kategóriája) | [Telepítés](https://raw.githubusercontent.com/conwid/EP3T/master/tanszekiportal/jegyzet_kategoria.user.js)
 
 Oktatói neptun | |
-|---------------------|---
-[Aktuális félév kiválasztása](https://github.com/conwid/EP3T#Aktuális-félév-kiválasztása) | [Telepítés](https://github.com/conwid/EP3T/raw/feature/neptun-felev/neptun/felevvalasztas.user.js)
+---------------------|---
+[Aktuális félév kiválasztása](https://github.com/conwid/EP3T/tree/feature/neptun-felev#aktuális-félév-kiválasztása) | [Telepítés](https://github.com/conwid/EP3T/raw/feature/neptun-felev/neptun/felevvalasztas.user.js)
 
 # Diplomaterv portál https://diplomaterv.vik.bme.hu
 ## Dipterv portál témalista áttekinthetőségének javítása
