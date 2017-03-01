@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tanszéki portál értékelések színezése
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  A tanszéki portálon az értékelések listájánál a nem értékelt sorok hátterét kiszínezi
 // @author       Ákos Nagy, Dániel Kis-Nagy, Tibor Tóth
 // @match        https://www.aut.bme.hu/Course/*/*/*/*
@@ -16,10 +16,19 @@ var rows=$(rowSelector + ', ' + rowAltSelector);
 var changedCount = 0;
 
 rows.each(function() {
-    var grade = $(this).find('option:selected');
-    if (grade.text()=='Értékelje')
+    var gradeSelect = $(this).find('option:selected');
+    if (gradeSelect.text()=='Értékelje')
     {
         $(this).css('background-color','#FFDFDF');
+    }
+    
+    var gradeTextInput = $(this).find('input#txtResult');
+    if (gradeTextInput){
+        var gradeText = gradeTextInput.val();
+        if (!gradeText || /^\s*$/.test(gradeText))
+        {
+            $(this).css('background-color','#FFDFDF');
+        }
     }
 });
 
